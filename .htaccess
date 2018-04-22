@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase .
+
+Options +FollowSymLinks 
+RewriteCond %{REQUEST_URI} ^/string/checkout/(.*)$
+RewriteRule ^(.*)$ /string/checkout/%1 [END]
+
+RewriteCond %{REQUEST_URI} ^/string/(.*)$
+RewriteRule ^(.*)$ /%1 [R,L]
+
